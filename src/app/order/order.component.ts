@@ -7,12 +7,14 @@ import { PizzadataService } from '../pizzadata.service';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  
+  dataArray:any;
   constructor(private service:PizzadataService) { }
-  pizzadata:any
+ 
   ngOnInit() {
-    this.service.getpizzadetails().subscribe((results)=>this.pizzadata=results)
-    console.log(this.pizzadata)
+    this.service.getpizzadetails().subscribe((results)=>{this.dataArray=results;
+    console.log(this.dataArray)});
+
   }
+
 
 }
