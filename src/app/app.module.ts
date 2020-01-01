@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-
+    HttpClientModule,
     RouterModule.forRoot([{
       path:'',component:HomeComponent
      
