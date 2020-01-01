@@ -1,16 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
+import { OrderComponent } from './order/order.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrderComponent,
+    IngredientsComponent,
+    HomeComponent,
+    
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+
+    RouterModule.forRoot([{
+      path:'',component:HomeComponent
+     
+    },{path:'orders',component:OrderComponent},
+      {path:'ingredients',component:IngredientsComponent}
+  ])
   ],
   providers: [],
   bootstrap: [AppComponent]
