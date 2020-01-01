@@ -1,0 +1,39 @@
+<div  class="text-white">
+    <div class="row" >
+        <div class="col-md-5  mx-auto" *ngFor="let data of dataArray" style="margin: 3%;">
+           <div class="card" style="background-color: rgb(23, 42, 69);">
+               <table  style="border: none;">
+                    <tr >
+                        <td>{{data.name}}</td>
+                        <td>{{data.description}}</td>
+                        <td colspan="2"><img [src]="data.image" width="35%" height="35%" style="float: right;max-width: 50%;"></td>
+                    </tr >
+                    <tr>
+                       
+                        <td *ngIf="data.type=='veg'">
+                            <!-- <ng-template thenblock style="background-color: green;width: 100px;height: 100px;"></ng-template>
+                            <ng-template elseblock style="background-color: red;width: 100px;height: 100px;"></ng-template> -->
+                            <span style="height: 15px;
+                            width: 15px;
+                            background-color: green;
+                            border-radius: 0%;
+                            display: inline-block;"></span>
+                        </td>
+                        <td *ngIf="data.type=='nonveg'">
+                            <span style="height: 15px;
+                            width: 15px;
+                            background-color: red;
+                            border-radius: 0%;
+                            display: inline-block;"></span>
+                        </td>
+                        <td><p><strong>Ingredients:</strong>{{data.ingredients}}</p></td>
+                    </tr>
+                    <tr>
+                        <td><p><Strong></Strong>{{data.price}}</p></td>
+                    </tr>
+               </table>
+           </div>
+        </div>
+     
+    </div>
+</div>

@@ -24,7 +24,7 @@ app.get("/getpizza",function(req,res){
             }
             else{
                 res.json(response)
-                console.log(response)
+           
             }
         }
     )
