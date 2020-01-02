@@ -1,1 +1,21 @@
-<p style="color: white;">ingredients works!</p>
+<div>
+    <p style="text-align: center;color: rgb(100, 255, 218);">Pizzeria now gives you  options to build your own pizza. Customize your pizza by choosing ingredients from the list given below</p>
+    
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <table  class="table" border="1" style="background-color: rgb(23, 42, 69);color: rgb(100, 255, 218); border: 2px solid rgb(100, 255, 218);;"   >
+      
+                <tr *ngFor="let i of ingredientsarr" style="border: 2px solid rgb(100, 255, 218);;">
+                    <td ><img [src]="i.image" style="width: 100px;height: 100px;" ></td>
+                    <td><span>{{i.tname}}</span><span>	&#8377;{{i.price}}</span></td>
+                    <td><span style="float: right;"><input type="checkbox"><button class="btn btn-warning" style="color: black;">Add<i class="fa fa-plus"></i></button></span></td>
+                    
+                </tr>
+       
+    </table>
+        </div>
+        </div>
+
+  
+</div>

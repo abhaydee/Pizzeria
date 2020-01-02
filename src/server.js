@@ -30,15 +30,16 @@ app.get("/getpizza",function(req,res){
     )
 })
 
-app.get("/getingredients",function(req,res){
-    db.collection('ingredients').find().toArray(
+app.get("/geting",function(req,res){
+    db.collection('ing').find().toArray(
         function(err,response){
             if(err){
                 console.log("could not get ingredients")
             }
             else
-            {
+            {   console.log(response)
                 res.json(response)
+      
             }
         }
     )

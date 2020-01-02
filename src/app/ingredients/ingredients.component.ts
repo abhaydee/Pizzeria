@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IngreService } from '../ingre.service';
 
 @Component({
   selector: 'app-ingredients',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngredientsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service:IngreService) { }
+  ingredientsarr:any=[]
   ngOnInit() {
+    this.service.geting().subscribe(ingredients=>{this.ingredientsarr=ingredients
+    console.log(this.ingredientsarr)})
   }
 
 }

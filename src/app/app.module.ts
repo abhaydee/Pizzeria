@@ -8,6 +8,8 @@ import { OrderComponent } from './order/order.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PizzadataService } from './pizzadata.service';
+import { IngreService } from './ingre.service';
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
       {path:'ingredients',component:IngredientsComponent}
   ])
   ],
-  providers: [],
+  providers: [PizzadataService,IngreService],
   bootstrap: [AppComponent,OrderComponent]
 })
 export class AppModule { }
