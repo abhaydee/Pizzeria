@@ -18,7 +18,9 @@ export class ShoppingComponent implements OnInit {
   deletedata(id){
     console.log("will delete data")
     this.service.senddeletedata(id).subscribe(ddata=>{console.log(ddata)
-    
+      this.service.gettempdata().subscribe(tempresults=>{console.log(tempresults)
+        this.tempdata=tempresults
+        })
     })
   }
 
