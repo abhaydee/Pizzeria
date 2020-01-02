@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PizzadataService } from './pizzadata.service';
 import { IngreService } from './ingre.service';
+import { ShoppingComponent } from './shopping/shopping.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { IngreService } from './ingre.service';
     OrderComponent,
     IngredientsComponent,
     HomeComponent,
+    ShoppingComponent,
     
 
   ],
@@ -28,7 +30,8 @@ import { IngreService } from './ingre.service';
       path:'',component:HomeComponent
      
     },{path:'orders',component:OrderComponent},
-      {path:'ingredients',component:IngredientsComponent}
+      {path:'ingredients',component:IngredientsComponent},
+      {path:'shopping',component:ShoppingComponent}
   ])
   ],
   providers: [PizzadataService,IngreService],

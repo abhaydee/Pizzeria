@@ -1,0 +1,16 @@
+
+<div class="row">
+    <div class="col-md-2" *ngFor="let temp of tempdata">
+        <div class="card"  >
+            <div class="card-header">{{temp.name}}</div>
+            <div class="card-body">
+                <img [src]="temp.image" width="40%">
+               
+            </div>
+            <div class="card-footer">
+                 <div><p>{{temp.price}}</p></div>
+                 <button class="btn btn-warning">Delete<i class="fas fa-trash-alt"></i></button>
+            </div>         
+        </div>
+    </div>
+</div>

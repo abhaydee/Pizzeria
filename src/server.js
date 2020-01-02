@@ -37,9 +37,34 @@ app.get("/geting",function(req,res){
                 console.log("could not get ingredients")
             }
             else
-            {   console.log(response)
+            {   
                 res.json(response)
       
+            }
+        }
+    )
+})
+
+app.post("/postpizza",function(req,res){
+    db.collection('temppizza').insertOne(req.body,function(err,response){
+        if(err){
+            console.log("cannot add to temppizza")
+        }
+        else{
+            res.json(response)
+            console.log(response)
+        }
+    })
+})
+app.get("/getdata",function(req,res){
+    db.collection('temppizza').find().toArray(
+        function(err,response){
+            if(err){
+                console.log(err)
+            }
+            else{
+                res.json(response)
+                
             }
         }
     )

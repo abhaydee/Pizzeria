@@ -27,7 +27,7 @@
                             display: inline-block;"></span>
                         </td>
                         <td><p style="font-style: italic;"><strong>Ingredients:</strong>{{data.ingredients}}</p></td>
-                        <td><button class="btn btn-warning">Add to Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></button></td>
+                        <td><button class="btn btn-warning" (click)="passdata(data.id,data.image,data.price,data.name)">Add to Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></button></td>
                     </tr>
                     <tr >
                         <td><p style="font-style:italic;"><Strong>	&#8377;</Strong>{{data.price}}</p></td>

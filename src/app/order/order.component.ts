@@ -16,5 +16,10 @@ export class OrderComponent implements OnInit {
 
   }
 
+  passdata(id,image,price,name){
+    console.log("pass data clicked")
+    this.service.postpizzadetails(id,image,price,name).subscribe((temp)=>{console.log(temp)})
+  }
+
 
 }
