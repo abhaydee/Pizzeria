@@ -30,6 +30,19 @@ app.get("/getpizza",function(req,res){
     )
 })
 
+app.get("/getingredients",function(req,res){
+    db.collection('ingredients').find().toArray(
+        function(err,response){
+            if(err){
+                console.log("could not get ingredients")
+            }
+            else
+            {
+                res.json(response)
+            }
+        }
+    )
+})
 app.listen(5000,()=>{
     console.log("server running on 5000")
 })
