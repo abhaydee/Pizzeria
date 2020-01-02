@@ -15,5 +15,10 @@ export class ShoppingComponent implements OnInit {
     this.tempdata=tempresults
     })
   }
+  deletedata(id){
+    this.service.senddeletedata(id).subscribe(deleteddata=>{console.log(deleteddata)
+    
+    })
+  }
 
 }

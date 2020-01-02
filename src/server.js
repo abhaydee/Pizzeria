@@ -52,7 +52,7 @@ app.post("/postpizza",function(req,res){
         }
         else{
             res.json(response)
-            console.log(response)
+            
         }
     })
 })
@@ -65,6 +65,22 @@ app.get("/getdata",function(req,res){
             else{
                 res.json(response)
                 
+            }
+        }
+    )
+})
+
+app.post("/deletedata",function(req,res){
+    console.log("the body1",req.body1)
+    db.collection('temppizza').find({id:req.body1}).toArray(
+        function(err,response){
+            if(err){
+                console.log(err)
+            }
+            else
+            {
+                res.json(response)
+                console.log(response)
             }
         }
     )
