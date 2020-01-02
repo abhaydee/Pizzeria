@@ -16,7 +16,8 @@ export class ShoppingComponent implements OnInit {
     })
   }
   deletedata(id){
-    this.service.senddeletedata(id).subscribe(deleteddata=>{console.log(deleteddata)
+    console.log("will delete data")
+    this.service.senddeletedata(id).subscribe(ddata=>{console.log(ddata)
     
     })
   }

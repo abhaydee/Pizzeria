@@ -27,9 +27,10 @@ export class PizzadataService {
   }
 
   senddeletedata(id){
-   let body1={
+    console.log("will definately delete data")
+   let body={
       id:id
     }
-    return this.http.post("http://localhost:5000/deletedata",body1)
+    return this.http.post("http://localhost:5000/deletingdata",body)
   }
 }

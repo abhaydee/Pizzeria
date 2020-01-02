@@ -70,9 +70,9 @@ app.get("/getdata",function(req,res){
     )
 })
 
-app.post("/deletedata",function(req,res){
-    console.log("the body1",req.body1)
-    db.collection('temppizza').find({id:req.body1}).toArray(
+app.post("/deletingdata",function(req,res){
+    console.log("the body1",req.body.id)
+    db.collection('temppizza').deleteOne({id:req.body.id},
         function(err,response){
             if(err){
                 console.log(err)
@@ -80,7 +80,7 @@ app.post("/deletedata",function(req,res){
             else
             {
                 res.json(response)
-                console.log(response)
+               
             }
         }
     )
