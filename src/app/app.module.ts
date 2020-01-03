@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PizzadataService } from './pizzadata.service';
 import { IngreService } from './ingre.service';
 import { ShoppingComponent } from './shopping/shopping.component';
-
+import {FormsModule } from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { ShoppingComponent } from './shopping/shopping.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([{
       path:'',component:HomeComponent
      

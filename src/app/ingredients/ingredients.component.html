@@ -9,13 +9,24 @@
                 <tr *ngFor="let i of ingredientsarr" style="border: 2px solid rgb(100, 255, 218);;">
                     <td ><img [src]="i.image" style="width: 100px;height: 100px;" ></td>
                     <td><span>{{i.tname}}</span><span>	&#8377;{{i.price}}</span></td>
-                    <td><span style="float: right;"><input type="checkbox"><button class="btn btn-warning" style="color: black;">Add<i class="fa fa-plus"></i></button></span></td>
+                    <td><form [formGroup]="ingredientsform"><span style="float: right;"><input type="checkbox" (change)="checked()" [name]="i.tname" [value]="i.id" [formControl]="i.tname"></span></form></td>
                     
                 </tr>
        
     </table>
+        <div>
+
+            <p style="color: rgb(100, 255, 218);">Total Cost:</p>
+            <button class="btn " style="color:rgb(100, 255, 218);background: rgb(23, 42, 69);">Build Ur Pizza</button>
+            
+        </div>
+       
         </div>
         </div>
 
-  
+        <footer>
+            <div class="navbar navbar-expand-sm bg-warning" style="color:black;">
+              <h4 style="margin-left: 35%;">Copyrights<i class="fa fa-copyright" aria-hidden="true">2017/Pizzeria .All rights  reserved</i></h4>
+          </div>
+        </footer>
 </div>
