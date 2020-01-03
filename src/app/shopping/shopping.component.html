@@ -13,3 +13,18 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-2" *ngFor="let c of customdata">
+        <div class="card"  style="margin: 3%;background-color: rgb(23, 42, 69);color: rgb(100, 255, 218);">
+            <div class="card-header">{{c.tname}}</div>
+            <div class="card-body">
+                <img [src]="c.image" width="40%">
+               
+            </div>
+            <div class="card-footer">
+                 <span><p>{{c.price}}</p><button class="btn btn-warning" (click)="deletedata(temp.id)">Delete  <i class="fa fa-trash"></i></button></span>
+            </div>         
+        </div>
+    </div>
+</div>

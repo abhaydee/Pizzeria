@@ -10,10 +10,13 @@ export class ShoppingComponent implements OnInit {
 
   constructor(private service:PizzadataService) { }
   tempdata:any=[]
+  customdata:any=[]
   ngOnInit() {
     this.service.gettempdata().subscribe(tempresults=>{console.log(tempresults)
     this.tempdata=tempresults
-  
+    this.service.getcdata().subscribe(customresults=>{console.log("mycustom",customresults)
+    this.customdata=customresults
+  })
     })
   }
   deletedata(id){

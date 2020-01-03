@@ -33,4 +33,8 @@ export class PizzadataService {
     }
     return this.http.post("http://localhost:5000/deletingdata",body)
   }
+
+  getcdata(){
+    return this.http.get("http://localhost:5000/getcusdata")
+  }
 }

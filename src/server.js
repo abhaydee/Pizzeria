@@ -39,7 +39,7 @@ app.get("/geting",function(req,res){
             else
             {   
                 res.json(response)
-                console.log(response)
+            
       
             }
         }
@@ -82,6 +82,31 @@ app.post("/deletingdata",function(req,res){
             {
                 res.json(response)
                
+            }
+        }
+    )
+})
+
+app.post("/sendcustom",function(req,res){
+    db.collection('custom').insert(req.body,function(err,response){
+        if(err){
+            console.log("could not custom ingredient")
+        }
+        else{
+            res.json(response);
+            console.log(response)
+        }
+    })
+})
+app.get("/getcusdata",function(req,res){
+    db.collection('custom').find().toArray(
+        function(err,response){
+            if(err){
+                console.log(err)
+            }
+            else
+            {
+                res.json(response)
             }
         }
     )
