@@ -10,4 +10,12 @@ export class IngreService {
   geting():any{
     return this.http.get("http://localhost:5000/geting")
   }
+  sendcustomization(image,name,price){
+    let body={
+      image:image,
+      name:name,
+      price:price
+    }
+    return this.http.post("http://localhost:5000/sendcustom",body)
+  }
 }

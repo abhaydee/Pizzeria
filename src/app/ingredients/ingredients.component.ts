@@ -40,9 +40,18 @@ export class IngredientsComponent implements OnInit {
   })
   cost:number=0;
   pricedata:any=[]
-  checked(name,price){
-    console.log("the price",price)
-    console.log("the name",name)
+  pricing:number=0;
+  customname:any;
+  customimage:any;
+  checked(image,name,price){
+    this.customimage=image
+    this.customname=name
+    this.pricing=price
+   
+    console.log("the custom image",this.customimage)
+  
+    console.log("the custom name",this.customname)
+    console.log("the custom priciing",this.pricing)
     console.log(this.ingredientsform.value);
     this.pricedata=this.ingredientsform.value;
     console.log(this.pricedata)
@@ -54,9 +63,14 @@ export class IngredientsComponent implements OnInit {
       this.cost=this.cost-price
       console.log(this.cost)
     }
-
-    
-
   }
+
+  building(){
+    this.service.sendcustomization(this.customimage,this.customname,this.pricing+100).subscribe(response=>{console.log(response)})
+  }
+
+
+
+ 
   
 }

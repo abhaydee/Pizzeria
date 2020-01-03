@@ -13,6 +13,7 @@ export class ShoppingComponent implements OnInit {
   ngOnInit() {
     this.service.gettempdata().subscribe(tempresults=>{console.log(tempresults)
     this.tempdata=tempresults
+  
     })
   }
   deletedata(id){
@@ -20,6 +21,7 @@ export class ShoppingComponent implements OnInit {
     this.service.senddeletedata(id).subscribe(ddata=>{console.log(ddata)
       this.service.gettempdata().subscribe(tempresults=>{console.log(tempresults)
         this.tempdata=tempresults
+        console.log(this.tempdata)
         })
     })
   }
