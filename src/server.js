@@ -111,6 +111,18 @@ app.get("/getcusdata",function(req,res){
         }
     )
 })
+app.post("/deletecustomdata",function(req,res){
+    db.collection('custom').deleteOne({tname:req.body.tname},function(err,response){
+        if(err)
+        {
+            console.log("could not delete custom data")
+        }
+        else
+        {
+            res.json(response)
+        }
+    })
+})
 app.listen(5000,()=>{
     console.log("server running on 5000")
 })

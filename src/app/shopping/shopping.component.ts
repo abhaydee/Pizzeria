@@ -29,4 +29,12 @@ export class ShoppingComponent implements OnInit {
     })
   }
 
+  deletecustomdata(names){
+    console.log("to be deleted",names);
+    this.service.dextradata(names).subscribe(results=>{console.log(results)})
+    this.service.getcdata().subscribe(customresults=>{console.log("mycustom",customresults)
+    this.customdata=customresults
+  })
+  }
+
 }
