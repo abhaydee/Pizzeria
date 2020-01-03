@@ -15,10 +15,10 @@ export class IngredientsComponent implements OnInit {
     this.service.geting().subscribe(ingredients=>{this.ingredientsarr=ingredients
     console.log(this.ingredientsarr)})
   }
-  checked1:any;
-  checked(){
-    alert(this.checked1)
-  }
+  // checked1:any;
+  // checked(){
+  //   alert(this.checked1)
+  // }
   ingredientsform=new FormGroup({
     "Sweet corn":new FormControl(),
     "Black beans":new FormControl(),
@@ -38,5 +38,25 @@ export class IngredientsComponent implements OnInit {
 
 
   })
+  cost:number=0;
+  pricedata:any=[]
+  checked(name,price){
+    console.log("the price",price)
+    console.log("the name",name)
+    console.log(this.ingredientsform.value);
+    this.pricedata=this.ingredientsform.value;
+    console.log(this.pricedata)
+    if(this.ingredientsform.value[name]===true){
+      this.cost=this.cost+price
+    console.log("the cost",this.cost)
+    }
+    if(this.ingredientsform.value[name]===false){
+      this.cost=this.cost-price
+      console.log(this.cost)
+    }
+
+    
+
+  }
   
 }
