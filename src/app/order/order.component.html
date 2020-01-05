@@ -1,12 +1,13 @@
 <div  class="text-white">
-    <div class="row" >
+    <div class="row abhay1" id="abhay" >
         <div class="col-md-6  mx-auto" *ngFor="let data of dataArray" style="margin: 1%;">
            <div class="card" style="background-color: rgb(23, 42, 69);color: rgb(100, 255, 218); ">
                <table  style="border: 1px solid  rgb(100, 255, 218);">
                     <tr >
                         <td style="font-weight: bold;font-style: italic;">{{data.name}}</td>
                         <td style="font-style: italic;">{{data.description}}</td>
-                        <td colspan="2" id="firstimage"><img [src]="data.image" width="150px" height="150px" id="image" ></td>
+                        <td colspan="2" id="firstimage"><img [src]="data.image" width="80%" height="80%" id="image" style=" max-width:100%;
+                            height:auto;object-fit: contain;float: right; "  ></td>
                     </tr >
                     <tr>
                        
@@ -27,7 +28,7 @@
                             display: inline-block;"></span>
                         </td>
                         <td><p style="font-style: italic;"><strong>Ingredients:</strong>{{data.ingredients}}</p></td>
-                        <td><button class="btn btn-warning" (click)="passdata(data.id,data.image,data.price,data.name)">Add to Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></button></td>
+                        <td><button class="btn btn-warning" style="float: right;" (click)="passdata(data.id,data.image,data.price,data.name)">Add to Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></button></td>
                     </tr>
                     <tr >
                         <td><p style="font-style:italic;"><Strong>	&#8377;</Strong>{{data.price}}</p></td>

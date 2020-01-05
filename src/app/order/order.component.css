@@ -3,3 +3,17 @@
        max-width: 100%;
     }
 }
+
+@media screen and (max-width:969px){
+    #abhay{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:470px){
+    #firstimage{
+        width: 30%;
+        height: 30%;
+    }
+}
