@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import {NgwWowService} from 'ngx-wow';
+@Injectable()
+
 
 @Component({
   selector: 'app-home',
@@ -10,6 +13,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
   }
+
 
 }

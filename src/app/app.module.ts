@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
-
+import { NgwWowModule } from 'ngx-wow';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
@@ -28,6 +28,7 @@ import {ReactiveFormsModule} from '@angular/forms'
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    NgwWowModule,
     ReactiveFormsModule,
     RouterModule.forRoot([{
       path:'',component:HomeComponent
