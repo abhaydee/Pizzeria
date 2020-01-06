@@ -1,9 +1,21 @@
 import { TestBed } from '@angular/core/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
 
 import { IngreService } from './ingre.service';
 
 describe('IngreService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: UserService;
+let httpMock;
+  beforeEach(() => {TestBed.configureTestingModule({
+    imports:[HttpClientTestingModule],
+    providers:[IngreService]
+  })
+  service = TestBed.get(IngreService);
+  httpMock = TestBed.get(HttpTestingController);
+});
+
+
+
 
   it('should be created', () => {
     const service: IngreService = TestBed.get(IngreService);
