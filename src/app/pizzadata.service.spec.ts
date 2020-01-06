@@ -8,7 +8,8 @@ describe('PizzadataService', () => {
   let service:PizzadataService;
   let httpMock;
   let a,b,c,d:any;
-  let id:any
+  let id:any;
+  let exe,exe1:any;
   beforeEach(() => {TestBed.configureTestingModule({
     imports:[HttpClientTestingModule],
     providers:[PizzadataService]
@@ -64,6 +65,19 @@ it('should get custom pizza data',()=>{
   const req4=httpMock.expectOne("http://localhost:5000/getcusdata")
   expect(req4.request.method).toBe("GET")
 })
+
+it('should post custom pizza data',()=>{
+  service.dextradata(exe,exe1).subscribe((cdata)=>{
+    expect(cdata).toBeTruthy();
+  });
+  const req5=httpMock.expectOne("http://localhost:5000/deletecustomdata")
+  expect(req5.request.method).toBe("POST")
+})
+
+
+
+
+
 
 
 
