@@ -1,13 +1,19 @@
-@media screen and (max-width:800px){
-    .cart1{
-    position: absolute;
-        top: 0;
-        right: 20%;
-        
+
+
+@media screen and (min-width:1000px){
+    #carts{
+        position: absolute;
+        right: 2%;
     }
 }
 
-
+@media screen and (max-width:995px){
+    .carts1{
+        position: absolute;
+        top: 20%;
+        right: 0;
+    }
+}
 
 div{
     font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;}

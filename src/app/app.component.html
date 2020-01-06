@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-md navbar-dark  p-0" style="background:rgb(10, 25, 47);color:rgb(100, 255, 218)">
+<!-- <div class="navbar navbar-expand-md navbar-dark  p-0" style="background:rgb(10, 25, 47);color:rgb(100, 255, 218)">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" ><span class="navbar-toggler-icon"></span></button>
     <div class="navbar-collapse collapse" id="navbar">
             <a class="navbar-brand nav-link " routerLink="" style="color:rgb(100, 255, 218);padding-right:1%;border-right: 1px solid grey; height: 40px;">Pizzeria  </a>
@@ -8,5 +8,31 @@
    <a  class="nav-link "  routerLink="shopping" class="btn btn-warning cart1 ml-auto" >Shopping Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
        
     </div>
-  </div>
+  </div> -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background:rgb(10, 25, 47);color:rgb(100, 255, 218)">
+    <a class="navbar-brand" href="#" routerLink="" style="color:rgb(100, 255, 218);padding-right:1%;border-right: 1px solid grey; height: 40px;">Pizzeria</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a routerLink="" class="nav-link"><img src="https://media-cdn.tripadvisor.com/media/photo-s/13/29/3a/c8/logo.jpg" width="80"></a>
+          
+        </li>
+        <li class="nav-item" style="margin-top: 4%;">
+          <a  routerLink="orders" class="nav-link navbar-brand" class="navbar-brand"  id="orders">Order Pizza</a>
+        </li>
+        <li class="nav-item" style="margin-top: 4%;" >
+          <a routerLink="ingredients" class="nav-link navbar-brand" class="navbar-brand" id="build">Build  Ur Pizza</a>
+        </li>
+        <li class="nav-item carts1" style="margin-top: 1%;" id="carts" >
+          <a  class="nav-link"  routerLink="shopping" class="btn btn-warning" >Shopping Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+
+        </li>
+      </ul>
+    </div>
+  </nav>
   <router-outlet></router-outlet>
