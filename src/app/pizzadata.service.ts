@@ -38,9 +38,10 @@ export class PizzadataService {
     return this.http.get("http://localhost:5000/getcusdata")
   }
 
-  dextradata(names){
+  dextradata(myid,names){
     let body={
-      tname:names
+      tname:names,
+      myid:myid
     }
     return this.http.post("http://localhost:5000/deletecustomdata",body)
   }

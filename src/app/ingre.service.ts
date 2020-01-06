@@ -14,7 +14,8 @@ export class IngreService {
     let body={
       image:image,
       name:name,
-      price:price
+      price:price,
+      cusid:(price/4)*2
     }
     return this.http.post("http://localhost:5000/sendcustom",body)
   }

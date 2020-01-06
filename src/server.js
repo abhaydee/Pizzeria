@@ -90,12 +90,12 @@ app.post("/deletingdata",function(req,res){
 app.post("/sendcustom",function(req,res){
     db.collection('custom').insert(req.body,function(err,response){
         if(err){
-            console.log("could not custom ingredient")
+           throw(err)
         }
-        else{
-            res.json(response);
-            console.log(response)
-        }
+        
+        res.json(response);
+        console.log(response)
+        
     })
 })
 app.get("/getcusdata",function(req,res){
@@ -112,13 +112,14 @@ app.get("/getcusdata",function(req,res){
     )
 })
 app.post("/deletecustomdata",function(req,res){
-    db.collection('custom').deleteOne({tname:req.body.tname},function(err,response){
+    console.log("cusid",req.body.cusid)
+    db.collection('custom').deleteOne({cusid:req.body.myid},function(err,response){
         if(err)
         {
             console.log("could not delete custom data")
         }
         else
-        {
+        {   console.log(response)
             res.json(response)
         }
     })
