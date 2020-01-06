@@ -4,7 +4,7 @@ import {HttpClientTestingModule, HttpTestingController} from '@angular/common/ht
 import { IngreService } from './ingre.service';
 
 describe('IngreService', () => {
-  let service: UserService;
+  let service: IngreService;
 let httpMock;
   beforeEach(() => {TestBed.configureTestingModule({
     imports:[HttpClientTestingModule],
@@ -14,11 +14,17 @@ let httpMock;
   httpMock = TestBed.get(HttpTestingController);
 });
 
-
-
-
   it('should be created', () => {
     const service: IngreService = TestBed.get(IngreService);
     expect(service).toBeTruthy();
   });
+
+  it('should get ingredients',()=>{
+    service.geting().subscribe((ing)=>{
+      expect(ing).toBeTruthy();
+    })
+    const req1=httpMock.expectOne('http://localhost:5000/geting')
+    expect(req1.request.method).toBe("GET");
+  })
+
 });
