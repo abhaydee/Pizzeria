@@ -1,12 +1,12 @@
-<div class="navbar navbar-expand-lg navbar-dark  p-0" style="background:rgb(10, 25, 47);color:rgb(100, 255, 218)">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="navbar navbar-expand-md navbar-dark  p-0" style="background:rgb(10, 25, 47);color:rgb(100, 255, 218)">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" ><span class="navbar-toggler-icon"></span></button>
     <div class="navbar-collapse collapse" id="navbar">
-            <a class="navbar-brand " routerLink="" style="color:rgb(100, 255, 218);padding-right:1%;border-right: 1px solid grey; height: 40px;">Pizzeria  </a>
-        <a routerLink=""><img src="https://media-cdn.tripadvisor.com/media/photo-s/13/29/3a/c8/logo.jpg" width="80"></a>
-        <a  routerLink="orders" class="navbar-brand" id="orders">Order Pizza</a>
-        <a routerLink="ingredients" class="navbar-brand" id="build">Build  Ur Pizza</a>
-        <div  id="shopping"> <a routerLink="shopping" class="btn btn-warning" >Shopping Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-        </div>
+            <a class="navbar-brand nav-link " routerLink="" style="color:rgb(100, 255, 218);padding-right:1%;border-right: 1px solid grey; height: 40px;">Pizzeria  </a>
+        <a routerLink="" class="nav-link"><img src="https://media-cdn.tripadvisor.com/media/photo-s/13/29/3a/c8/logo.jpg" width="80"></a>
+        <a  routerLink="orders" class="nav-link" class="navbar-brand" id="orders">Order Pizza</a>
+        <a routerLink="ingredients" class="nav-link" class="navbar-brand" id="build">Build  Ur Pizza</a>
+   <a  class="nav-link "  routerLink="shopping" class="btn btn-warning cart1 ml-auto" >Shopping Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+       
     </div>
   </div>
   <router-outlet></router-outlet>
