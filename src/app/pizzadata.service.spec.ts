@@ -57,6 +57,14 @@ it('send temp pizza data',()=>{
   expect(req3.request.method).toBe("GET")
 })
 
+it('should get custom pizza data',()=>{
+  service.getcdata().subscribe((cdata)=>{
+    expect(cdata).toBeTruthy();
+  });
+  const req4=httpMock.expectOne("http://localhost:5000/getcusdata")
+  expect(req4.request.method).toBe("GET")
+})
+
 
 
 
