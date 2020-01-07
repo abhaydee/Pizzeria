@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { NgwWowModule } from 'ngx-wow';
 import { AppRoutingModule } from './app-routing.module';
-import {RouterModule} from '@angular/router'
+import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
@@ -11,8 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PizzadataService } from './pizzadata.service';
 import { IngreService } from './ingre.service';
 import { ShoppingComponent } from './shopping/shopping.component';
-import {FormsModule } from '@angular/forms'
-import {ReactiveFormsModule} from '@angular/forms'
+import {FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {ReactiveFormsModule} from '@angular/forms'
     IngredientsComponent,
     HomeComponent,
     ShoppingComponent,
-    
+
 
   ],
   imports: [
@@ -31,14 +31,14 @@ import {ReactiveFormsModule} from '@angular/forms'
     NgwWowModule,
     ReactiveFormsModule,
     RouterModule.forRoot([{
-      path:'',component:HomeComponent
-     
-    },{path:'orders',component:OrderComponent},
-      {path:'ingredients',component:IngredientsComponent},
-      {path:'shopping',component:ShoppingComponent}
+      path: '', component: HomeComponent
+
+    }, {path: 'orders', component: OrderComponent},
+      {path: 'ingredients', component: IngredientsComponent},
+      {path: 'shopping', component: ShoppingComponent}
   ])
   ],
-  providers: [PizzadataService,IngreService],
-  bootstrap: [AppComponent,OrderComponent]
+  providers: [PizzadataService, IngreService],
+  bootstrap: [AppComponent, OrderComponent]
 })
 export class AppModule { }

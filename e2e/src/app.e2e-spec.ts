@@ -7,39 +7,39 @@ describe('workspace-project App', () => {
   beforeEach(() => {
     page = new AppPage();
   });
-  it('should check our story',()=>{
+  it('should check our story', () => {
     page.navigateTo();
-    let c=element.all(by.tagName('h3')).first();
-    let t=c.getText()
+    const c = element.all(by.tagName('h3')).first();
+    const t = c.getText();
     expect(t).toEqual('Our Story');
   });
 
-  it( 'should check for button text', () =>{
+  it( 'should check for button text', () => {
     page.navigateOrder();
-    let pl=element(by.css('.testing'));
-    let text=pl.getText();
-    expect(text).toEqual('Add to cart');
+    const pl = element(by.css('.testing'));
+    const text = pl.getText();
+    expect(text).toEqual('Add to Cart');
 });
 
 
-it( 'should check for ingredients text', () =>{
+  it( 'should check for ingredients text', () => {
   page.navigateCustom();
-  let pl=element.all(by.css('#paragraph'));
-  let text=pl.getText();
-  expect(text).toContain('Total Cost');
+  const pl = element.all(by.css('#paragraph'));
+  const text = pl.getText();
+  expect(text).toContain('Total Cost:0');
 });
 
-  it('should check nav',()=>{
+  it('should check nav', () => {
     page.navigateTo();
-    let c=element(by.tagName('nav')).isPresent();
+    const c = element(by.tagName('nav')).isPresent();
     expect(c).toBeTruthy();
   });
 
 
-  it('should check Pizzaria in navbar',()=>{
+  it('should check Pizzaria in navbar', () => {
     page.navigateTo();
-    let c=element.all(by.tagName('a')).first();
-    let t=c.getText()
+    const c = element.all(by.tagName('a')).first();
+    const t = c.getText();
     expect(t).toEqual('Pizzeria');
   });
 

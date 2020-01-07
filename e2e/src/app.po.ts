@@ -5,14 +5,14 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  navigateOrder(){
-    let url="http://localhost:4200/orders"
+  navigateOrder() {
+    const url = 'http://localhost:4200/orders';
     return browser.get(url) as Promise<any>;
 
   }
 
-  navigateCustom(){
-    let url="http://localhost:4200/ingredients"
+  navigateCustom() {
+    const url = 'http://localhost:4200/ingredients';
     return browser.get(url) as Promise<any>;
 
   }
