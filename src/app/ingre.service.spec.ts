@@ -6,6 +6,7 @@ import { IngreService } from './ingre.service';
 describe('IngreService', () => {
   let service: IngreService;
 let httpMock;
+let body,body1,body2;
   beforeEach(() => {TestBed.configureTestingModule({
     imports:[HttpClientTestingModule],
     providers:[IngreService]
@@ -25,6 +26,13 @@ let httpMock;
     })
     const req1=httpMock.expectOne('http://localhost:5000/geting')
     expect(req1.request.method).toBe("GET");
+  })
+  it('should send customized pizza',()=>{
+    service.sendcustomization(body,body1,body2).subscribe((res)=>{
+      expect(res).toBeTruthy();
+    })
+    const req2=httpMock.expectOne('http://localhost:5000/sendcustom')
+    expect(req2.request.method).toBe("POST")
   })
 
 });

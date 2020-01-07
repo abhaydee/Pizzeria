@@ -94,7 +94,7 @@ app.post("/sendcustom",function(req,res){
         }
         
         res.json(response);
-        console.log(response)
+        // console.log(response)
         
     })
 })
@@ -119,7 +119,8 @@ app.post("/deletecustomdata",function(req,res){
             console.log("could not delete custom data")
         }
         else
-        {   console.log(response)
+        {   
+            // console.log(response)
             res.json(response)
         }
     })

@@ -22,12 +22,12 @@ export class PizzadataService {
   }
 
   gettempdata(){
-    console.log("hitting temp data")
+    // console.log("hitting temp data")
     return this.http.get("http://localhost:5000/getdata")
   }
 
   senddeletedata(id){
-    console.log("will definately delete data")
+    // console.log("will definately delete data")
    let body={
       id:id
     }

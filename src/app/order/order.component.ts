@@ -12,13 +12,16 @@ export class OrderComponent implements OnInit {
  
   ngOnInit() {
     this.service.getpizzadetails().subscribe((results)=>{this.dataArray=results;
-    console.log(this.dataArray)});
+    // console.log(this.dataArray)
+  });
 
   }
 
   passdata(id,image,price,name){
-    alert("pizza added to cart")
-    this.service.postpizzadetails(id,image,price,name).subscribe((temp)=>{console.log(temp)})
+    // alert("pizza added to cart")
+    this.service.postpizzadetails(id,image,price,name).subscribe((temp)=>{
+      // console.log(temp)
+    })
   }
 
 

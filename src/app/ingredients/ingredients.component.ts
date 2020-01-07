@@ -13,7 +13,8 @@ export class IngredientsComponent implements OnInit {
   ingredientsarr:any=[]
   ngOnInit() {
     this.service.geting().subscribe(ingredients=>{this.ingredientsarr=ingredients
-    console.log(this.ingredientsarr)})
+    // console.log(this.ingredientsarr)
+  })
   }
   // checked1:any;
   // checked(){
@@ -48,25 +49,27 @@ export class IngredientsComponent implements OnInit {
     this.customname=name
     this.pricing=price
    
-    console.log("the custom image",this.customimage)
+    // console.log("the custom image",this.customimage)
   
-    console.log("the custom name",this.customname)
-    console.log("the custom priciing",this.pricing)
-    console.log(this.ingredientsform.value);
+    // console.log("the custom name",this.customname)
+    // console.log("the custom priciing",this.pricing)
+    // console.log(this.ingredientsform.value);
     this.pricedata=this.ingredientsform.value;
-    console.log(this.pricedata)
+    // console.log(this.pricedata)
     if(this.ingredientsform.value[name]===true){
       this.cost=this.cost+price
-    console.log("the cost",this.cost)
+    // console.log("the cost",this.cost)
     }
     if(this.ingredientsform.value[name]===false){
       this.cost=this.cost-price
-      console.log(this.cost)
+      // console.log(this.cost)
     }
   }
 
   building(){
-    this.service.sendcustomization(this.customimage,this.customname,this.pricing+100).subscribe(response=>{console.log(response)})
+    this.service.sendcustomization(this.customimage,this.customname,this.pricing+100).subscribe(response=>{
+      // console.log(response)
+    })
   }
 
 
