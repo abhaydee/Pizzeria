@@ -39,6 +39,6 @@ import {ReactiveFormsModule} from '@angular/forms';
   ])
   ],
   providers: [PizzadataService, IngreService],
-  bootstrap: [AppComponent, OrderComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
