@@ -6,6 +6,18 @@ div{
     color: rgb(100, 255, 218);
 }
 
+@media screen and(max-width:450px){
+    .size1{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:550px){
+    .size2{
+        margin-left: 30%;
+    }
+}
+
 #build{
     padding-left: 1%;
     color: rgb(100, 255, 218);
