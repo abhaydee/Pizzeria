@@ -22,7 +22,7 @@ describe('PizzadataService', () => {
 
 });
   it('should be created', () => {
-    const service: PizzadataService = TestBed.get(PizzadataService);
+
     expect(service).toBeTruthy();
   });
 
