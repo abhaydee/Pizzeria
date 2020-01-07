@@ -25,11 +25,12 @@ describe('ShoppingComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should delete pizza', () => {
-    let id: any;
+    const id = 1;
     expect(component.deletedata(id)).toBeUndefined();
   });
   it('should delete custom pizza', () => {
-    let id1, name: any;
+    const id1 = 1;
+    const name = 'asd';
     expect(component.deletecustomdata(id1, name)).toBeUndefined();
   });
 

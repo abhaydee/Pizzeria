@@ -27,7 +27,10 @@ describe('OrderComponent', () => {
   });
 
   it('data has to be passed', () => {
-    let a, b, c, d;
+    const a = 1;
+    const b = 1;
+    const  c = 1;
+    const  d = 1;
     expect(component.passdata(a, b, c, d)).toBeUndefined();
   });
 });

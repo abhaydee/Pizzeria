@@ -28,7 +28,9 @@ describe('IngredientsComponent', () => {
   });
 
   it('ingredients to be checked', () => {
-    let a, b, c;
+    const a = 1;
+    const b = 2;
+    const  c = 3;
     expect(component.checked(a, b, c)).toBeUndefined();
   });
 

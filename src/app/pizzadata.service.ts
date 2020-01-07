@@ -8,7 +8,7 @@ export class PizzadataService {
   constructor(private http: HttpClient) { }
   private url = 'http://localhost:5000/getpizza';
   getpizzadetails() {
-    return this.http.get<Object>(this.url);
+    return this.http.get(this.url);
   }
   postpizzadetails(id, image, price, name) {
     const body = {

@@ -5,17 +5,20 @@ import { PizzadataService } from './pizzadata.service';
 import { request } from 'http';
 
 describe('PizzadataService', () => {
-  let service: PizzadataService;
-  let httpMock;
-  let a, b, c, d: any;
-  let id: any;
-  let exe, exe1: any;
+  const service = TestBed.get(PizzadataService);
+  const httpMock = TestBed.get(HttpTestingController);
+  const a = 1;
+  const b = 1;
+  const  c = 1;
+  const  d = 1;
+  const id: any = 1;
+  const exe = 1;
+  const exe1 = 2;
   beforeEach(() => {TestBed.configureTestingModule({
     imports: [HttpClientTestingModule],
     providers: [PizzadataService]
   });
-                    service = TestBed.get(PizzadataService);
-                    httpMock = TestBed.get(HttpTestingController);
+
 
 });
   it('should be created', () => {
@@ -43,8 +46,8 @@ describe('PizzadataService', () => {
 });
 
   it('delete the pizza data', () => {
-  service.senddeletedata(id).subscribe((a) => {
-    expect(a).toBeTruthy();
+  service.senddeletedata(id).subscribe((abc) => {
+    expect(abc).toBeTruthy();
   });
   const req2 = httpMock.expectOne('http://localhost:5000/deletingdata');
   expect(req2.request.method).toBe('POST');
